@@ -1,8 +1,28 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+}
+
 body {
-    height: 500px;
-    width: 300px;
+    height: 800px;
+    width: 400px;
     outline: none;
+    display: block;
   }
+  .hidecalc:focus ~ .calc {
+    display: none;
+  }
+  .showcalc:focus ~ .calc {
+    display: block;
+  }
+
+  .calc { display:none; }
+
 footer {
     position: fixed;
     left: 0;
@@ -12,6 +32,14 @@ footer {
     color: white;
     text-align: center;
     }
-.right {
-    text-align: right;
-}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
