@@ -3,6 +3,7 @@
     "version": "0.1",
     "description": "/dev/ext0/",
     "permissions": ["storage"],
+    "content_security_policy": "script-src 'self'; object-src 'self'; unsafe-inline",
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {
