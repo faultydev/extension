@@ -1,13 +1,30 @@
-function download(){
-    var text = document.getElementById("my-textarea").value;
-    text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
-    var blob = new Blob([text], { type: "text/plain"});
-    var anchor = document.createElement("a");
-    anchor.download = "my-filename.txt";
-    anchor.href = window.URL.createObjectURL(blob);
-    anchor.target ="_blank";
-    anchor.style.display = "none"; // just to be safe!
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
- }
+function saveTextAsFile()
+{
+    var textToWrite = document.getElementById('textArea').value;
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var fileNameToSaveAs = "ecc.plist";
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null)
+    {
+        // Chrome allows the link to be clicked
+        // without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    else
+    {
+        // Firefox requires the link to be added to the DOM
+        // before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+}
+
+var button = document.getElementById('save');
+button.addEventListener('click', saveTextAsFile);
