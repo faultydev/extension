@@ -33,6 +33,13 @@ footer {
     text-align: center;
     }
 
+textarea {
+
+  width: 390px;
+  height: 120px;
+
+}
+
 button {
     background-color: #4CAF50; /* Green */
     border: none;
