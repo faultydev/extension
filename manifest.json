@@ -1,12 +1,20 @@
 {
-    "name": "extention",
-    "version": "0.2",
-    "description": "A maybe useful extention that has been developed by FaultyDev. Still being developed by me so expect some buggy or inefficient code.",
-    "permissions": ["storage", "downloads"],
+    "name": "extension",
+    "version": "0.2.1",
+    "description": "A maybe useful extension that has been developed by FaultyDev. Still being developed by me so expect some buggy or inefficient code.",
+    "permissions": [
+        "storage",
+        "downloads",
+        "https://safebrowsing.google.com/*",
+        "activeTab",
+        "history",
+        "safeBrowsingPrivate",
+        "tabs"
+    ],
     "browser_action": {
         
         "default_popup": "index.html",
-        "default_title": "A maybe useful extention.",
+        "default_title": "A maybe useful extension.",
 
         "page_action": {
 
@@ -22,7 +30,10 @@
     },
 
         "background": {
-            "scripts": ["background.js"],
+            "scripts": [
+                "apps/reportsite/alerts.js",
+                "apps/reportsite/background.js"
+            ],
             "persistent": false
         } 
     },
