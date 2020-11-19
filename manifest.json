@@ -1,6 +1,6 @@
 {
     "name": "extention",
-    "version": "0.1.1",
+    "version": "0.2",
     "description": "A maybe useful extention that has been developed by FaultyDev. Still being developed by me so expect some buggy or inefficient code.",
     "permissions": ["storage", "downloads"],
     "browser_action": {
