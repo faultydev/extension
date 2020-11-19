@@ -5,7 +5,7 @@
     "permissions": ["storage", "downloads"],
     "browser_action": {
         
-        "default_popup": "popup.html",
+        "default_popup": "index.html",
         "default_title": "A maybe useful extention.",
 
         "page_action": {
