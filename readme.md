@@ -1,5 +1,5 @@
-# Extention
-A chrome extention with tools.  
+# Extension
+A chrome extension with tools.  
 a swiss army knife but for browsers.  
 # What's inside?
 
