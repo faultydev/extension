@@ -2,7 +2,7 @@
     "name": "extention",
     "version": "0.1.1",
     "description": "A maybe useful extention that has been developed by FaultyDev. Still being developed by me so expect some buggy or inefficient code.",
-    "permissions": ["storage"],
+    "permissions": ["storage", "downloads"],
     "browser_action": {
         
         "default_popup": "popup.html",
@@ -15,7 +15,7 @@
                 "32": "images/get_started32.png",
                 "48": "images/get_started48.png",
                 "128": "images/get_started128.png"
-        }
+}
 
         
         
@@ -24,9 +24,7 @@
         "background": {
             "scripts": ["background.js"],
             "persistent": false
-        }
-        
-        
+        } 
     },
 
     "icons": {
@@ -34,7 +32,8 @@
                 "32": "images/get_started32.png",
                 "48": "images/get_started48.png",
                 "128": "images/get_started128.png"
-        },
+            },
+
     "manifest_version": 2
     
 }
